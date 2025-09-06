@@ -1,0 +1,7 @@
+
+/*Cambio de color de fondo en el botón */
+.btn {
+    background-color: #6c4675 !important;
+    border: none !important;
+    color: white !important;
+}

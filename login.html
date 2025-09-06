@@ -6,5 +6,35 @@
     </head>   
     <body>
         <script src="scripts.js"></script>
+        <section>
+            <!-- Sección de banner--> <!-- Esta debe ser replicada en cada pagina -->
+            <div> <!-- Sección de titulo-->
+            <h1> TodOKartas</h1>
+            <h2> La mejor mano</h2>
+                <div> <!-- Sección de botones de login y carrito -->
+                    <a href="register.html"> Inicia sesión (ojala un icono) </a>
+                    <a href="checkout.html"> Carrito de compras (ojalá un icono) </a>
+                </div>
+            </div>
+            <div> <!-- Sección de navegación-->
+                <a href="home.html"> Home </a>
+                <a href="products.html"> Catálogo de productos</a>
+            </div>
+        </section> <!-- Fin sección banner-->
+        <section class="container"> <!-- sección inicio de sesión  -->
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="sign_in()">Ingresar</button>
+                <a href="register.html" class="btn btn-primary">Registrarse</a>
+            </form>
+        </section>
     </body>
 </html>
