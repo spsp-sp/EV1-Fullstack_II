@@ -1,5 +1,70 @@
 
-/*Cambio de color de fondo en el botón */
+/* ===== Estilos del banner ===== */
+.banner {
+    background-color: #6c4675; /* Morado */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.banner h2 {
+    margin: 0 auto 30px; /* margen superior 0 y  margen inferior 30px */
+    color: #b5b2b2;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.banner-logo {
+    display: block;
+    margin: 0 auto 10px; /* Centra la imagen y espacio inferior 10px */
+    max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+}
+
+.icon-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.icon-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+}
+
+.icon-links a:hover {
+    color: #e0e0e0;
+}
+
+.nav-bar {
+    background-color: #343a40; /* Gris oscuro */
+    padding: 10px 0;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+.nav-bar a:hover {
+    color: #e0e0e0;
+}
+
+ /* .....Fin estilos del banner..... */
+
+/* ===== Estilos de los formularios ===== /*
+
+/* Cambio de color de fondo en el botón */
 .btn {
     background-color: #6c4675 !important;
     border: none !important;

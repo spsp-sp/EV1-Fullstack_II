@@ -19,5 +19,5 @@ function sign_in() {
     }
 
     // Si todo está bien → redirige
-    window.location.href = "formulario.html";
+    window.location.href = "home.html";
 }
