@@ -1,0 +1,44 @@
+/* Banner personalizado */
+#banner {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Comentario: Estilo para los botones de login y registro */
+#btn-login,
+#btn-registro {
+    min-width: 150px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/* Comentario: Espaciado entre los botones */
+#form-login .d-flex {
+    margin-top: 10px;
+    gap: 10px;
+}
+
+/* Comentario: Estilo para el mensaje de login */
+#login-mensaje {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+/* Botones de detalle */
+.btn-detalle {
+    margin-top: 10px;
+}
+
+/* Sección Nosotros */
+#nosotros {
+    background-color: #eef;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Sección Blogs */
+#blogs .card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}

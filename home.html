@@ -1,25 +1,153 @@
-<!-- Pagina principal -->
-<html>
-    <head>
-    <title> TodOKartas - La mejor mano </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>   
-    <body>
-        <script src="scripts.js"></script>
-        <section>
-            <!-- Sección de banner--> <!-- Esta debe ser replicada en cada pagina -->
-            <div> <!-- Sección de titulo-->
-            <h1> TodOKartas</h1>
-            <h2> La mejor mano</h2>
-                <div> <!-- Sección de botones de login y carrito -->
-                    <a href="register.html"> Inicia sesión (ojala un icono) </a>
-                    <a href="checkout.html"> Carrito de compras (ojalá un icono) </a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Título principal de la página -->
+    <title>TodOKartas</title>
+    <!-- Subtítulo debajo del título principal -->
+    <meta charset="UTF-8">
+    <!-- Bootstrap CDN para estilos rápidos y responsivos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+    <!-- Banner con logo y subtítulo -->
+    <div id="banner" class="text-center p-4">
+        <!-- Aquí va el logo de la página -->
+        <img src="ruta/logo.png" alt="Logo TodOKartas" style="max-width: 200px;">
+        <h1>TodOKartas</h1>
+        <h3>La mejor mano</h3>
+    </div>
+
+    <!-- Sección de Login y Registro -->
+    <div id="login-registro" class="container mb-4">
+        <!-- Formulario de inicio de sesión y registro -->
+        <!-- Sugerencia: usar Bootstrap modal para mejor experiencia -->
+        <form id="form-login" class="row g-3">
+            <!-- Comentario: Se han eliminado los campos de usuario y contraseña -->
+            
+            <!-- Botones separados para iniciar sesión y registrarse -->
+            <!-- Comentario: Dos botones alineados horizontalmente -->
+            <div class="col-12 d-flex justify-content-start gap-2">
+                <button type="button" class="btn btn-primary" id="btn-login">Iniciar Sesión</button>
+                <button type="button" class="btn btn-outline-secondary" id="btn-registro">Regístrate</button>
+            </div>
+
+            <!-- Mensaje de login -->
+            <div id="login-mensaje" class="mt-2"></div>
+        </form>
+        <!-- Comentario: El login almacena usuario=ADMIN y contraseña=1234 como ejemplo -->
+    </div>
+
+    <!-- Sección de Productos -->
+    <div id="productos" class="container mb-4">
+        <h2>Productos</h2>
+        <div class="row">
+            <!-- 6 divisiones para productos -->
+            <!-- Repetir este bloque para agregar producto -->
+            <!-- diseño usando Bootstrap Cards -->
+            <!-- Repetir para agregar productos -->
+            <!-- producto 1 -->
+            <div class="col-md-4 mb-3" id="producto1">
+                <!-- Imagen del producto -->
+                <div class="card">
+                    <img src="ruta/producto1.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <!-- Botón para mostrar detalle del producto -->
+                        <button class="btn btn-info btn-detalle" data-producto="1">Detalle Producto</button>
+                    </div>
                 </div>
             </div>
-            <div> <!-- Sección de navegación-->
-                <a href="home.html"> Home </a>
-                <a href="products.html"> Catálogo de productos</a>
+            <!-- productos 2-->
+            <div class="col-md-4 mb-3" id="producto2">
+                <div class="card">
+                    <img src="ruta/producto2.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="2">Detalle Producto</button>
+                    </div>
+                </div>
             </div>
-        </section>
-    </body>
+            <!-- productos 3-->
+            <div class="col-md-4 mb-3" id="producto3">
+                <div class="card">
+                    <img src="ruta/producto3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="3">Detalle Producto</button>
+                    </div>
+                </div>
+            </div>
+            <!-- productos 4-->
+            <div class="col-md-4 mb-3" id="producto4">
+                <div class="card">
+                    <img src="ruta/producto4.jpg" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 4</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="4">Detalle Producto</button>
+                    </div>
+                </div>
+            </div>
+            <!-- productos 5-->
+            <div class="col-md-4 mb-3" id="producto5">
+                <div class="card">
+                    <img src="ruta/producto5.jpg" class="card-img-top" alt="Producto 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 5</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="5">Detalle Producto</button>
+                    </div>
+                </div>
+            </div>
+            <!-- productos 6-->
+            <div class="col-md-4 mb-3" id="producto6">
+                <div class="card">
+                    <img src="ruta/producto6.jpg" class="card-img-top" alt="Producto 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 6</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="6">Detalle Producto</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Cada botón muestra un mensaje con la descripción del producto seleccionado -->
+        </div>
+    </div>
+
+    <!-- Sección Nosotros -->
+    <div id="nosotros" class="container mb-4">
+        <h2>Nosotros</h2>
+        <p>Aquí puedes agregar información sobre la empresa, misión, visión, etc.</p>
+        <!-- Comentario: Edita esta sección con CSS para personalizar el diseño -->
+    </div>
+
+    <!-- Sección Blogs -->
+    <div id="blogs" class="container mb-4">
+        <h2>Blogs</h2>
+        <div class="row">
+            <!-- Detalle Blog 1 -->
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Blog 1</h5>
+                        <button class="btn btn-secondary btn-detalle-blog" data-blog="1">Detalle Blog 1</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Detalle Blog 2 -->
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Blog 2</h5>
+                        <button class="btn btn-secondary btn-detalle-blog" data-blog="2">Detalle Blog 2</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Comentario: Cada botón muestra un mensaje con el detalle del blog seleccionado -->
+    </div>
+
+    <!-- Scripts de Bootstrap y JS personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JavaScript/main.js"></script>
+</body>
 </html>
