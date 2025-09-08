@@ -60,13 +60,25 @@
     color: #e0e0e0;
 }
 
- /* .....Fin estilos del banner..... */
-
-/* ===== Estilos de los formularios ===== /*
 
 /* Cambio de color de fondo en el botón */
 .btn {
     background-color: #6c4675 !important;
     border: none !important;
     color: white !important;
+}
+.card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Botón lila */
+.btn-lila {
+  background-color: #9b5de5;
+  color: white;
+  border: none;
+}
+.btn-lila:hover {
+  background-color: #7b2cbf;
 }
