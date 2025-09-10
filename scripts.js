@@ -72,3 +72,5 @@ function validarFormulario() {
     window.location.href = "home.html";
     return false; // Para que no se haga el submit real (Aún)
 }
+
+//funcion para el carrito de compras

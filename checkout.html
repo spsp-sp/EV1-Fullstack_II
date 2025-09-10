@@ -1,10 +1,77 @@
 <!-- Carrito de compras -->
-<html>
-    <head>
-    <title> TodOKartas - La mejor mano </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>   
-    <body>
-        <script src="scripts.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - TodOKartas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="mb-4">Checkout</h1>
+
+    <!-- Resumen del producto -->
+    <div class="card mb-4">
+      <div class="card-header">Resumen del pedido</div>
+      <div class="card-body">
+        <p><strong>Producto:</strong> Charizard GX</p>
+        <p><strong>Precio unitario:</strong> $9.990</p>
+        <p><strong>Cantidad:</strong> 1</p>
+        <p><strong>Total:</strong> $9.990</p>
+      </div>
+    </div>
+
+    <!-- Formulario de pago -->
+    <form>
+      <div class="card">
+        <div class="card-header">Datos para pagar</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label" for="nombre">Nombre y Apellido</label>
+            <input type="text" id="nombre" class="form-control" placeholder="Ej: Juan Pérez">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="correo">Correo</label>
+            <input type="email" id="correo" class="form-control" placeholder="ejemplo@correo.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="direccion">Dirección</label>
+            <input type="text" id="direccion" class="form-control" placeholder="Calle 123, Ciudad">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" class="form-control" placeholder="+56 9 1234 5678">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="pago">Método de pago</label>
+            <select id="pago" class="form-select">
+              <option>Tarjeta Débito</option>
+              <option>Tarjeta Crédito</option>
+              <option>Transferencia</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="tarjeta">Número de tarjeta</label>
+            <input type="text" id="tarjeta" class="form-control" placeholder="XXXX XXXX XXXX XXXX">
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label" for="expira">Fecha de vencimiento</label>
+              <input type="text" id="expira" class="form-control" placeholder="MM/AA">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label" for="cvv">CVV</label>
+              <input type="text" id="cvv" class="form-control" placeholder="***">
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex gap-2">
+          <a href="products.html" class="btn btn-outline-secondary">Seguir comprando</a>
+          <button type="submit" class="btn btn-success">Pagar ahora</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
 </html>
