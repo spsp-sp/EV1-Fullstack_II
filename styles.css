@@ -186,3 +186,473 @@ h1 {
 .btn-lila:hover {
   background-color: #7b2cbf;
 }
+
+
+/* Estilos para los botones de login/registro y carrito en la esquina superior derecha del banner */
+.icon-links-top {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.banner-subtitle {
+    color: #b5b2b2;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.btn-cart {
+    background: #6c4675 !important;
+    color: white !important;
+    border: none !important;
+}
+.btn-cart:hover {
+    background: #7b2cbf !important;
+    color: #fff !important;
+}
+
+/* fin de los estilos para login y registro */
+
+/* Ajuste banners destacados home */
+/* Banner destacado home - personalizado */
+.section-banners-home .container {
+    max-width: 1200px;
+}
+
+.section-banners-home .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px; /* Espacio entre columnas */
+}
+
+.section-banners-home .col-lg-4,
+.section-banners-home .col-lg-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    padding: 0;
+}
+
+.section-banners-home .col-lg-4 {
+    min-width: 320px;
+    max-width: 400px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.section-banners-home .col-lg-8 {
+    min-width: 640px;
+    max-width: 800px;
+    height: 100%;
+}
+
+.section-banners-home .col-lg-4 .textbanner {
+    flex: 1 1 48%;
+    min-height: 200px;
+    max-height: 50%;
+    margin-bottom: 16px;
+}
+.section-banners-home .col-lg-4 .textbanner:last-child {
+    margin-bottom: 0;
+}
+
+.section-banners-home .col-lg-8 .textbanner {
+    flex: 1 1 100%;
+    min-height: 410px;
+    max-height: 100%;
+}
+
+.section-banners-home .textbanner-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    max-height: 410px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.section-banners-home .banner-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    height: 100%;
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+}
+
+.section-banners-home .banner-link:hover {
+    box-shadow: 0 0 15px #9b5de5;
+    text-decoration: none;
+}
+
+.section-banners-home .banner-link:hover .textbanner-image img {
+    transform: scale(1.03);
+}
+
+/* Botón largo y centrado en banners destacados */
+.btn-banner-home {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    padding: 0.9rem 2.5rem;
+    background-color: #6c4675 !important;
+    color: #fff !important;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(108, 70, 117, 0.15);
+    letter-spacing: 1px;
+}
+
+/* Centrado horizontal de la sección banners destacados */
+.section-banners-featured-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* habilitacion Responsiva para pantallas pequeñas */
+@media (max-width: 991.98px) {
+    .section-banners-home .row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .section-banners-home .col-lg-4,
+    .section-banners-home .col-lg-8 {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .section-banners-home .textbanner-image img {
+        min-height: 150px;
+        max-height: 250px;
+    }
+    .section-banners-home .col-lg-8 .textbanner {
+        min-height: 220px;
+    }
+    .btn-banner-home {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/*fin del ajuste de banner destacados en home*/
+
+/*INICIO de Estilos personalizados para la sección de productos */
+
+/* Contenedor de productos: usa flex para mejor control de espacio */
+.productos-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px; /* Espacio simétrico entre tarjetas */
+    justify-content: center;
+    margin-top: 24px;
+}
+
+/* Cada tarjeta ocupa hasta 3 por fila */
+#productos .col-md-4 {
+    flex: 1 1 30%;
+    max-width: 32%;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+/* Tarjeta de producto más grande */
+#productos .card {
+    width: 100%;
+    max-width: 370px;
+    min-height: 480px;
+    box-shadow: 0 2px 16px rgba(108,70,117,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 12px;
+    background: #fff;
+}
+
+/* Imagen de producto más grande y centrada */
+#productos .card-img-top {
+    width: 100%;
+    max-height: 350; /* Modifica aquí el alto de la imagen */
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+/* Título y botón centrados */
+#productos .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#productos .btn-detalle {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+    border-radius: 8px;
+}
+
+/* Responsive: en pantallas medianas y pequeñas */
+@media (max-width: 991.98px) {
+    #productos .col-md-4 {
+        max-width: 48%;
+        flex: 1 1 48%;
+        min-width: 220px;
+    }
+    #productos .card-img-top {
+        height: 180px; /* Modifica aquí el alto de la imagen en pantallas medianas */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .productos-row {
+        gap: 16px;
+    }
+    #productos .col-md-4 {
+        max-width: 98%;
+        flex: 1 1 98%;
+        min-width: 160px;
+    }
+    #productos .card-img-top {
+        height: 140px; /* Modifica aquí el alto de la imagen en móviles */
+    }
+}
+
+/* Fin de Estilos personalizados para la sección de productos */  
+
+/* === INICIO: Estilos para sección Nosotros y Blogs extendidos === */
+
+/* Sección Nosotros: contenedor extendido */
+.section-nosotros {
+    background: #f8f9fa;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(108,70,117,0.08);
+    width: 100%;
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Sección Blogs: contenedor extendido */
+.section-blogs {
+    background: #f3eaff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(108,70,117,0.08);
+    width: 100%;
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Blog card: imagen a la izquierda, texto a la derecha */
+/* Blog card: imagen a la izquierda, texto a la derecha, ocupa todo el ancho de la columna */
+.blog-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(108,70,117,0.07);
+    overflow: hidden;
+    min-height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-img-box {
+    flex: 0 0 220px; /* Imagen fija a la izquierda */
+    max-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9e6f7;
+}
+
+.blog-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+}
+
+.blog-content-box {
+    flex: 1 1 auto; /* El texto se extiende hasta el borde derecho */
+    background: #fff;
+    border-radius: 0 12px 12px 0;
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-title {
+    font-size: 1.3rem;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 8px;
+}
+
+.blog-desc {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.btn-blog-ingresar {
+    background-color: #6c4675 !important;
+    color: #fff !important;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(108,70,117,0.10);
+}
+
+/* Centra la división entre los dos blogs exactamente en el centro de la pantalla */
+.section-blogs .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.blog-card-left, .blog-card-right {
+    width: 50%; /* Cada blog ocupa la mitad exacta del contenedor */
+    min-width: 320px;
+    max-width: 800px;
+    margin: 0;
+}
+
+/* Responsive: en pantallas pequeñas, imagen arriba y texto abajo */
+@media (max-width: 991.98px) {
+    .blog-card-left, .blog-card-right {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+    .blog-card {
+        flex-direction: column !important;
+        min-height: 180px;
+    }
+    .blog-img-box {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+    }
+    .blog-img {
+        border-radius: 12px 12px 0 0;
+        height: 140px;
+    }
+    .blog-content-box {
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+/* FIN: Ajuste para división central y texto extendido en blogs*/
+
+/* Estilos para la sección Nosotros */
+
+/* === Estilos para sección Nosotros === */
+
+.section-nosotros {
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(108, 70, 117, 0.08);
+  width: 100%;
+  max-width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nosotros-layout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Reutiliza estilos de blog-card */
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(108, 70, 117, 0.07);
+  overflow: hidden;
+  min-height: 220px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-img-box {
+  flex: 0 0 220px;
+  max-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9e6f7;
+}
+
+.blog-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+}
+
+.blog-content-box {
+  flex: 1 1 auto;
+  background: #fff;
+  border-radius: 0 12px 12px 0;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-title {
+  font-size: 1.6rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 16px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 991.98px) {
+  .blog-card {
+    flex-direction: column !important;
+    min-height: 180px;
+  }
+
+  .blog-img-box {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .blog-img {
+    border-radius: 12px 12px 0 0;
+    height: 140px;
+  }
+
+  .blog-content-box {
+    border-radius: 0 0 12px 12px;
+    padding: 16px;
+  }
+}
+/* Fin estilos sección nosotros */
+

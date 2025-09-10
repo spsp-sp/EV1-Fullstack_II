@@ -73,4 +73,35 @@ function validarFormulario() {
     return false; // Para que no se haga el submit real (Aún)
 }
 
+// Seccion Banner Homme
+// Redirección de botones Login y Registro Home
+document.getElementById('btn-login')?.addEventListener('click', function() {
+    // Redirige a login.html
+    window.location.href = 'login.html';
+});
+document.getElementById('btn-registro')?.addEventListener('click', function() {
+    // Redirige a register.html
+    window.location.href = 'register.html';
+});
+
+// fin redirección botones Login y registro Home
+
+// Inicio imagenes banner
+
+// Ejemplo para redirección con JS (solo si usas <button>)
+// document.getElementById('banner-catalogo').addEventListener('click', function() {
+//     window.location.href = 'products.html';
+// });
+// document.getElementById('banner-blogs').addEventListener('click', function() {
+//     window.location.href = 'blogs.html';
+// });
+// document.getElementById('banner-pendiente').addEventListener('click', function() {
+//     window.location.href = 'URL_PENDIENTE';
+// });
+
+// Comentario: Si usas <a href="..."> no necesitas JS para redirección
+
+
+// Fin seccion Banner Homme
+
 //funcion para el carrito de compras

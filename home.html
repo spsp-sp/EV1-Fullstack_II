@@ -1,25 +1,257 @@
-<!-- Pagina principal -->
-<html>
-    <head>
-    <title> TodOKartas - La mejor mano </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>   
-    <body>
-        <script src="scripts.js"></script>
-        <section>
-            <!-- Sección de banner--> <!-- Esta debe ser replicada en cada pagina -->
-            <div> <!-- Sección de titulo-->
-            <h1> TodOKartas</h1>
-            <h2> La mejor mano</h2>
-                <div> <!-- Sección de botones de login y carrito -->
-                    <a href="register.html"> Inicia sesión (ojala un icono) </a>
-                    <a href="checkout.html"> Carrito de compras (ojalá un icono) </a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Título principal de la página -->
+    <title>TodOKartas</title>
+    <!-- Subtítulo debajo del título principal -->
+    <meta charset="UTF-8">
+    <!-- Bootstrap CDN para estilos rápidos y responsivos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Banner con logo, subtítulo y botones de login/registro en la esquina superior derecha -->
+    <section class="banner position-relative">
+        <div class="container">
+            <!-- Logo y subtítulo centrados -->
+            <img src="assets/images/banner_logo_v2.png" alt="TodOKartas Logo" class="banner-logo">
+            <h2>TodOKartas</h2>
+            <h3 class="banner-subtitle">La mejor mano</h3>
+            <!-- Botones de Login y Registro + iconos en la esquina superior derecha -->
+            <div class="icon-links-top">
+                <!-- Botón Login -->
+                <button type="button" class="btn btn-primary btn-sm me-2" id="btn-login">
+                    <!-- Icono login -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    </svg>
+                    Iniciar Sesión
+                    <!-- Redirige a login.html -->
+                </button>
+                <!-- Botón Registro -->
+                <button type="button" class="btn btn-outline-secondary btn-sm me-3" id="btn-registro">
+                    <!-- Icono registro (puedes usar el mismo o cambiar) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                        <path d="M13 7.5a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    Registrarse
+                    <!-- Redirige a register.html -->
+                </button>
+                <!-- Icono carrito -->
+                <a href="checkout.html" class="btn btn-cart btn-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    Carrito
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección banners destacados -->
+    <section class="section-banners-featured-home" data-store="home-banner-featured">
+        <div class="section-banners-home is-inViewport d-flex justify-content-center" data-transition="fade-in-up">
+            <div class="container">
+                <div class="row justify-content-center align-items-stretch">
+                    <!-- Banners de la izquierda: dos apilados verticalmente -->
+                    <div class="col-lg-4 d-flex flex-column justify-content-between align-items-center">
+                        <!-- Banner superior izquierdo: redirige a blogs.html -->
+                        <a href="blogs.html" class="textbanner mb-3 banner-link w-100" title="Ir a blogs">
+                            <!-- Cambia la imagen aquí -->
+                            <div class="textbanner-image p-0">
+                                <img class="img-fluid d-block w-100" src="assets/images/minscYboo1.webp" alt="Banner blogs">
+                                <!-- Comentario: Cambia 'src' por la imagen que desees mostrar -->
+                            </div>
+                            <div class="textbanner-text text-center">
+                                <div class="btn btn-default btn-large btn-banner-home mt-2">Entrevista exclusiva a Mins y Boo</div>
+                                <!-- Comentario: Cambia el texto si lo deseas -->
+                            </div>
+                        </a>
+                        <!-- Banner inferior izquierdo: redirige a un lugar pendiente -->
+                        <a href="#" class="textbanner banner-link w-100" title="Redirección pendiente">
+                            <!-- Cambia la imagen aquí -->
+                            <div class="textbanner-image p-0">
+                                <img class="img-fluid d-block w-100" src="assets/images/magicBanner.webp" alt="Banner pendiente">
+                                <!-- Comentario: Cambia 'src' por la imagen que desees mostrar -->
+                            </div>
+                            <div class="textbanner-text text-center">
+                                <div class="btn btn-default btn-large btn-banner-home mt-2">ACCESORIOS Y MÁS</div>
+                                <!-- Comentario: Cambia el texto si lo deseas -->
+                            </div>
+                        </a>
+                        <!-- Comentario: Cambia el href="#" por la dirección deseada cuando esté disponible -->
+                    </div>
+                    <!-- Banner grande a la derecha: redirige a products.html -->
+                    <div class="col-lg-8 d-flex align-items-stretch justify-content-center">
+                        <!-- Banner principal como botón grande -->
+                        <a href="products.html" class="textbanner banner-link w-100 h-100 d-flex flex-column justify-content-end" title="Ir a catálogo de productos">
+                            <!-- Cambia la imagen aquí -->
+                            <div class="textbanner-image p-0">
+                                <img class="img-fluid d-block w-100" src="assets/images/pokemonBanner1.jpg" alt="Banner principal">
+                                <!-- Comentario: Cambia 'src' por la imagen que desees mostrar -->
+                            </div>
+                            <div class="textbanner-text text-center">
+                                <div class="btn btn-default btn-large btn-banner-home mt-2">CATÁLOGO DESTACADO</div>
+                                <!-- Comentario: Cambia el texto si lo deseas -->
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div> <!-- Sección de navegación-->
-                <a href="home.html"> Home </a>
-                <a href="products.html"> Catálogo de productos</a>
+        </div>
+    </section>
+    <!-- Fin seccion Banner destacado -->
+
+    <!-- Sección de Productos -->
+    <div id="productos" class="container mb-4">
+        <h2>Productos</h2>
+        <div class="row productos-row">
+            <!-- 6 divisiones para productos -->
+            <!-- Cada producto es una card con imagen y botón de detalle -->
+            <div class="col-md-4 mb-3" id="producto1">
+                <div class="card">
+                    <img src="assets/images/Charizard_GX.webp" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <!-- Botón para mostrar detalle del producto -->
+                        <button class="btn btn-info btn-detalle" data-producto="1">
+                            Detalle Producto
+                            <!-- Aquí se mostrará el detalle del producto 1 -->
+                        </button>
+                    </div>
+                </div>
             </div>
-        </section>
-    </body>
+            <div class="col-md-4 mb-3" id="producto2">
+                <div class="card">
+                    <img src="assets/images/Misty-psyduck 193_182.webp" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="2">
+                            Detalle Producto
+                            <!-- Aquí se mostrará el detalle del producto 2 -->
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3" id="producto3">
+                <div class="card">
+                    <img src="assets/images/koraidon1.png" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="3">
+                            Detalle Producto
+                            <!-- Aquí se mostrará el detalle del producto 3 -->
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3" id="producto4">
+                <div class="card">
+                    <img src="assets/images/magic 2.jpg" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 4</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="4">
+                            Detalle Producto
+                            <!-- Aquí se mostrará el detalle del producto 4 -->
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3" id="producto5">
+                <div class="card">
+                    <img src="assets/images/magic 3.jpg" class="card-img-top" alt="Producto 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 5</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="5">
+                            Detalle Producto
+                            <!-- Aquí se mostrará el detalle del producto 5 -->
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3" id="producto6">
+                <div class="card">
+                    <img src="assets/images/baldursGate1.jpg" class="card-img-top" alt="Producto 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 6</h5>
+                        <button class="btn btn-info btn-detalle" data-producto="6">
+                            Detalle Producto
+                            <!-- Aquí se mostrará el detalle del producto 6 -->
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Fin Sección Productos -->
+
+    <!-- Sección Nosotros -->
+
+<!-- INICIO: Sección Blogs con división central y texto extendido -->
+<div id="blogs" class="container-fluid section-blogs my-4 py-4">
+    <div class="row justify-content-center">
+        <!-- Blog 1 -->
+        <div class="col-12 col-md-6 mb-4 d-flex flex-row align-items-stretch blog-card blog-card-left">
+            <!-- Imagen a la izquierda -->
+            <div class="blog-img-box">
+                <img class="img-fluid blog-img" src="assets/images/minscYboo1.webp" alt="Banner blogs">
+                <!-- Cambia 'src' por la imagen que desees mostrar -->
+            </div>
+            <!-- Texto y botón a la derecha, se extiende hasta el borde derecho del columna -->
+            <div class="blog-content-box d-flex flex-column justify-content-center p-3 flex-grow-1">
+                <h5 class="blog-title">Blog 1</h5>
+                <p class="blog-desc">Descubre la entrevista exclusiva a Mins y Boo y sus secretos en el mundo de las cartas.</p>
+                <a href="blog1.html" class="btn btn-secondary btn-blog-ingresar mt-2">Ingresar al Blog</a>
+                <!-- Cambia href por la dirección real del blog -->
+            </div>
+        </div>
+        <!-- Blog 2 -->
+        <div class="col-12 col-md-6 mb-4 d-flex flex-row align-items-stretch blog-card blog-card-right">
+            <!-- Imagen a la izquierda -->
+            <div class="blog-img-box">
+                <img class="img-fluid blog-img" src="assets/images/magicBanner.webp" alt="Banner blogs">
+                <!-- Cambia 'src' por la imagen que desees mostrar -->
+            </div>
+            <!-- Texto y botón a la derecha, se extiende hasta el borde derecho del columna -->
+            <div class="blog-content-box d-flex flex-column justify-content-center p-3 flex-grow-1">
+                <h5 class="blog-title">Blog 2</h5>
+                <p class="blog-desc">Explora los mejores accesorios y tips para coleccionistas y jugadores de Magic.</p>
+                <a href="blog2.html" class="btn btn-secondary btn-blog-ingresar mt-2">Ingresar al Blog</a>
+                <!-- Cambia href por la dirección real del blog -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN: Sección Blogs -->
+
+<!-- INICIO: Sección Nosotros con imagen y texto extendidos -->
+<div id="nosotros" class="container-fluid section-nosotros my-4 py-4">
+  <div class="nosotros-layout d-flex justify-content-center">
+    <div class="col-12 blog-card">
+      <!-- Imagen a la izquierda -->
+      <div class="blog-img-box">
+        <img class="blog-img" src="assets/images/banner_logo_v2.png" alt="Logo TodOKartas">
+      </div>
+
+      <!-- Texto a la derecha -->
+      <div class="blog-content-box p-4">
+        <h2 class="blog-title">Nosotros</h2>
+        <p><strong>TodOKartas</strong> es una tienda online especializada en tarjetas coleccionables, creada en Chile durante la pandemia como respuesta al creciente interés por el coleccionismo. Desde entonces, hemos ofrecido productos de alta calidad como cartas Pokémon, K-Pop y más, con envíos a todo el país.</p>
+        <p>Aunque no contamos con una tienda física, operamos activamente a través de redes sociales como Facebook, X y WhatsApp, brindando atención personalizada a cada cliente. El reciente auge en la compra de cartas nos impulsa a evolucionar, por lo que estamos desarrollando una plataforma web moderna, funcional y eficiente.</p>
+        <p><strong>Misión:</strong> Ofrecer una experiencia de compra única para coleccionistas en todo Chile, enfocándonos en la calidad de nuestros productos y la satisfacción de nuestra comunidad.</p>
+        <p><strong>Visión:</strong> Ser la tienda online líder en coleccionismo de cartas en Chile, destacando por nuestra innovación, atención al cliente y un programa de fidelización que premie a nuestros compradores más fieles.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN: Sección Nosotros -->
+
+
+    <!-- Scripts de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
 </html>
