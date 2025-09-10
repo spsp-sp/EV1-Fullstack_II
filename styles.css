@@ -74,11 +74,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* === Estilos de contenedores de productos === */
-.row {
+/*.row {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-    gap: 1px; /* espacio fijo entre columnas y filas */
-  }
+/*    gap: 1px; /* espacio fijo entre columnas y filas */
+  /*} */
+  
   
   /* Tarjetas ocupan todo el espacio del grid */
   .col-12.col-md-4 {
@@ -107,62 +108,46 @@ h1, h2, h3, h4, h5, h6 {
 /* ==== Estilos de detalle de productos === */
 /* Ajusta la imagen para que ocupe todo el ancho de su columna y mantenga proporción */
 .thumb {
-  width: 50%;  /* ocupar el ancho de la columna */
+  width: 100%;  /* ocupar el ancho de la columna */
   height: auto;
   border-radius: 0.5rem;
   object-fit: contain;
   max-height: 400px; /* limita altura para no desbalancear */
 }
 
-/* Para que el contenedor derecho tenga un padding para respirar */
-.col-md-6:last-child {
+/* Forzar el layout 50/50 solo en la página de detalle */
+.product-detail .row.g-4 {
+  display: flex;                 /* restablece a flex (Bootstrap) */
+  align-items: center;           /* centra verticalmente */
+}
+
+.product-detail .col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* Mantén el contenido derecho centrado y con padding */
+.product-detail .col-md-6:last-child {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra verticalmente el contenido */
+  justify-content: center;
   padding-left: 2rem;
 }
 
-/* Ajusta título y precio */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.price {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #420e6d;
-  margin-bottom: 1.5rem;
-}
-
-/* Para inputs y botón se vean bien alineados */
-#qty {
-  max-width: 120px;
-}
-
-.btn-success {
-  background-color: #6c4675;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-}
-
-/* Responsive: en pantallas pequeñas, que la imagen esté arriba y texto abajo */
+/* Responsive: stack en mobile */
 @media (max-width: 767.98px) {
-  .row.g-4 {
+  .product-detail .row.g-4 {
     display: block;
   }
-  .col-md-6 {
+  .product-detail .col-md-6 {
     width: 100% !important;
+    max-width: 100%;
     padding-left: 0 !important;
   }
-  .col-md-6:last-child {
-    padding-left: 0 !important;
+  .product-detail .col-md-6:last-child {
     margin-top: 1.5rem;
   }
 }
-
 
 /* ==== Estilos de botones ==== */
 /* Cambio de color de fondo en el botón */

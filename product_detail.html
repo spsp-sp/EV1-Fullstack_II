@@ -39,34 +39,34 @@
         <a href="products.html">Catálogo de Productos</a>
     </div>
   </section>
-  <div class="container py-4">
+  <div class="container py-4 product-detail">
     <a href="products.html" class="btn btn-outline-secondary mb-3">&larr; Volver</a>
 
     <div class="row g-4">
-      <!-- Imagen -->
+      <!-- Col izquierda: imagen -->
       <div class="col-md-6">
         <img src="assets/images/Charizard_GX.webp" alt="Charizard GX" class="thumb shadow-sm">
       </div>
 
-      <!-- Info OJALA MODIFICAR PARA QUE SE VEA TODO A LA DERECHA--> 
+      <!-- Col derecha: info -->
       <div class="col-md-6">
         <h1>Charizard GX</h1>
         <div class="price">$9.990</div>
 
         <form method="GET" action="checkout.html" class="mt-3">
-          <!-- Datos del producto (ocultos) -->
+          <!-- Datos ocultos del producto -->
           <input type="hidden" name="id" value="charizard-gx">
           <input type="hidden" name="name" value="Charizard GX">
           <input type="hidden" name="price" value="9990">
           <input type="hidden" name="img" value="assets/images/Charizard_GX.webp">
 
+          <div class="mb-3" style="max-width:160px;">
+            <label for="qty" class="form-label">Cantidad</label>
+            <input id="qty" name="qty" type="number" value="1" min="1" class="form-control" style="max-width:120px">
+          </div>
 
-        <div class="mb-3" style="max-width: 160px;"div>
-          <label for="qty" class="form-label">Cantidad</label>
-          <input id="qty" type="number" value="1" min="1" class="form-control" style="max-width:120px">
-        </div>
-
-        <button class="btn btn-success btn-lg">Agregar al carrito</button>
+          <button class="btn btn-success btn-lg" type="submit">Agregar al carrito</button>
+        </form>
 
         <hr>
         <h4>Descripción</h4>
@@ -75,8 +75,8 @@
           o ampliar tu colección. Estado Near Mint, incluye funda protectora.
         </p>
       </div>
-
-    
+    </div>
   </div>
+    
 </body>
 </html>
