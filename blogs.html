@@ -1,10 +1,80 @@
-<!-- Página de blogs/noticias -->
-<html>
-    <head>
-    <title> TodOKartas - La mejor mano </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>   
-    <body>
-        <script src="scripts.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TodOKartas - La mejor mano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Banner superior -->
+    <section class="banner position-relative">
+        <div class="container text-center">
+            <img src="assets/images/banner_logo_v2.png" alt="TodOKartas Logo" class="banner-logo mb-2">
+            <h2>TodOKartas</h2>
+            <h3 class="banner-subtitle">La mejor mano</h3>
+
+            <div class="icon-links-top">
+                <button class="btn btn-primary btn-sm me-2" id="btn-login">Iniciar Sesión</button>
+                <button class="btn btn-outline-secondary btn-sm me-2" id="btn-registro">Registrarse</button>
+                <a href="checkout.html" class="btn btn-cart btn-sm">Carrito</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra de navegación -->
+    <section class="nav-bar">
+        <div class="container text-center">
+            <a href="home.html">Home</a>
+            <a href="products.html">Catálogo de Productos</a>
+        </div>
+    </section>
+
+    <!-- Texto introductorio a lo largo de la pantalla -->
+    <section class="blog-intro py-4">
+        <div class="container">
+            <h3 class="blog-title">Entrevista exclusiva: Minsc y Boo invaden el mundo de Magic</h3>
+            <p class="blog-desc">
+                En una inesperada alianza entre los planos de Faerûn y Dominaria, Minsc y Boo han decidido formar parte del universo de Magic: The Gathering.
+                “¡Por el poder de la luna y el queso!” gritó Minsc mientras barajaba su mazo de criaturas legendarias. Boo, por supuesto, aprobó con un chillido heroico.
+                La entrevista se tornó caótica cuando Minsc intentó lanzar una carta como si fuera un hechizo real, provocando que el entrevistador se escondiera detrás de una pila de boosters.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección dividida: imagen izquierda, entrevista derecha -->
+    <section class="section-blogs">
+        <div class="container">
+            <div class="blog-card">
+
+                <!-- Imagen a la izquierda -->
+                <div class="blog-img-box">
+                <img src="assets/images/minscYbooLegendary.jpg" alt="Minsc y Boo jugando Magic" class="img-blog-minscboo">
+                </div>
+
+                <!-- Entrevista a la derecha -->
+                <div class="blog-content-box p-4">
+                    <h5 class="blog-title"> Diálogo entre el entrevistador y los héroes</h5>
+                    <p><strong>Entrevistador:</strong> Minsc, ¿cómo se siente lanzar un contrahechizo sin tener sabiduría arcana?</p>
+                    <p><strong>Minsc:</strong> ¡La sabiduría está sobrevalorada! ¡Boo me guía con su instinto roedor!</p>
+                    <p><strong>Boo:</strong> *chillido heroico*</p>
+                    <p><strong>Entrevistador:</strong> ¿Y qué opinan de las cartas negras?</p>
+                    <p><strong>Minsc:</strong> ¡Oscuras y traicioneras! Pero si tienen queso, quizás podamos negociar.</p>
+                    <p><strong>Boo:</strong> *mira fijamente una carta de Liliana con sospecha*</p>
+                    <p><strong>Entrevistador:</strong> ¿Algún consejo para nuevos jugadores?</p>
+                    <p><strong>Minsc:</strong> ¡Nunca subestimes el poder de un hámster con iniciativa!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
 </html>

@@ -641,3 +641,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Fin estilos sección nosotros */
 
+/*Entrevista*/
+
+.img-blog-minscboo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(108, 70, 117, 0.1);
+    margin: 0 auto;
+    display: block;
+}
+
+/*fin entrevista */
